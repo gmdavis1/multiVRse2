@@ -7,15 +7,13 @@ public class KeyboardController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
-            Vector3 target = transform.TransformDirection(new Vector3(-0.1f, 0, 0));
-            target.y = 0;
-            transform.position += target;
+            Vector3 target = new Vector3(0, -1f, 0);
+            transform.localEulerAngles += target;
         }
         else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            Vector3 target = transform.TransformDirection(new Vector3(0.1f, 0, 0));
-            target.y = 0;
-            transform.position += target;
+            Vector3 target = new Vector3(0, 1f, 0);
+            transform.localEulerAngles += target;
         }
         else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
