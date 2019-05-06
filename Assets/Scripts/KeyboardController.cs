@@ -7,19 +7,27 @@ public class KeyboardController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
-            transform.position = transform.position + new Vector3(-0.1f, 0, 0);
+            Vector3 target = transform.TransformDirection(new Vector3(-0.1f, 0, 0));
+            target.y = 0;
+            transform.position += target;
         }
         else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            transform.position = transform.position + new Vector3(0.1f, 0, 0);
+            Vector3 target = transform.TransformDirection(new Vector3(0.1f, 0, 0));
+            target.y = 0;
+            transform.position += target;
         }
         else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
-            transform.position = transform.position + new Vector3(0, 0, 0.1f);
+            Vector3 target = transform.TransformDirection(new Vector3(0, 0, 0.1f));
+            target.y = 0;
+            transform.position += target;
         }
         else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
-            transform.position = transform.position + new Vector3(0, 0, -0.1f);
+            Vector3 target = transform.TransformDirection(new Vector3(0, 0, -0.1f));
+            target.y = 0;
+            transform.position += target;
         }
     }
 }
