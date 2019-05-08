@@ -401,8 +401,15 @@ PlayerSettings:
     - OpenVR
   - m_BuildTarget: Android
     m_Enabled: 1
-    m_Devices: []
+    m_Devices:
+    - Oculus
   - m_BuildTarget: XboxOne
+    m_Enabled: 1
+    m_Devices: []
+  - m_BuildTarget: iPhone
+    m_Enabled: 1
+    m_Devices: []
+  - m_BuildTarget: tvOS
     m_Enabled: 1
     m_Devices: []
   m_BuildTargetEnableVuforiaSettings: []
