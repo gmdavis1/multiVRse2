@@ -162,8 +162,8 @@ PlayerSettings:
     Android: com.cs377e.multiVRse
     Standalone: com.oculus.UnitySample
   buildNumber: {}
-  AndroidBundleVersionCode: 3
-  AndroidMinSdkVersion: 21
+  AndroidBundleVersionCode: 5
+  AndroidMinSdkVersion: 25
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0
   aotOptions: 
