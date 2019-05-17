@@ -18,8 +18,8 @@ public class TextToSpeech : MonoBehaviour
     void Start()
     {
         //audio = gameObject.GetComponent<AudioSource>();
-        StartCoroutine(PlayTranslateAudio("test"));
-        //StartCoroutine(PlayCloudAudio("test"));
+        //StartCoroutine(PlayTranslateAudio("test"));
+        StartCoroutine(PlayCloudAudio("test"));
     }
 
     // Update is called once per frame
@@ -62,58 +62,14 @@ public class TextToSpeech : MonoBehaviour
         debugText.text = "Finished playing";
     }
 
-    void PlayCloudAudio(string text)
+    IEnumerator PlayCloudAudio(string text)
     {
-        //string url = "https://texttospeech.googleapis.com/v1/text:synthesize?fields=audioContent&key=AIzaSyDNiOUrvRHj0anRBsC1NrrU7v8wwA90v8E";
-        //string json = "{\n" +
-        //        "\"input\": {\n" +
-        //            "\"text\": \"Sample Text\"\n" +
-        //        "},\n" +
-        //        "\"voice\": {\n" +
-        //            "\"languageCode\": \"en-US\"\n" +
-        //        "},\n" +
-        //        "\"audioConfig\": {\n" +
-        //            "\"audioEncoding\": \"mp3\"\n" +
-        //        "}\n" +
-        //    "}";
-        //Dictionary<string, string> headers = new Dictionary<string, string>();
-        //Debug.Log(json);
-        //headers.Add("Content-Type", "application/json");
-        //WWW www = new WWW(url, Encoding.ASCII.GetBytes(json.ToCharArray()), headers);
-        //yield return www;
-
-        //Debug.Log("hi");
-
-        //var client = TextToSpeechClient.Create();
-
-        //// The input to be synthesized, can be provided as text or SSML.
-        //var input = new SynthesisInput
-        //{
-        //    Text = "This is a demonstration of the Google Cloud Text-to-Speech API"
-        //};
-
-        //// Build the voice request.
-        //var voiceSelection = new VoiceSelectionParams
-        //{
-        //    LanguageCode = "en-US",
-        //    SsmlGender = SsmlVoiceGender.Female
-        //};
-
-        //// Specify the type of audio file.
-        //var audioConfig = new AudioConfig
-        //{
-        //    AudioEncoding = AudioEncoding.Mp3
-        //};
-
-        //// Perform the text-to-speech request.
-        //var response = client.SynthesizeSpeech(input, voiceSelection, audioConfig);
-
-        //using (var output = File.Create("output.mp3"))
-        //{
-        //    response.AudioContent.WriteTo(output);
-        //}
-        //Console.WriteLine("Audio content written to file \"output.mp3\"");
-
-        //audio.clip = response.AudioContent;
+        debugText.text = text;
+        string url = "http://gmdavis.pythonanywhere.com/multivrse/1";
+        WWW www = new WWW(url);
+        yield return www;
+        audio.soundClips[0] = www.GetAudioClip(false, true, AudioType.MPEG);
+        debugText.text = "Finished playing";
+        audio.PlaySound();
     }
 }
