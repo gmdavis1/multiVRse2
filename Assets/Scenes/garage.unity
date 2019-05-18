@@ -1734,6 +1734,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.85
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: c43d3e1459d196b4fa2218250fdffcf7,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9f8f55cfd868cfc40b220889b13b3e02, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c43d3e1459d196b4fa2218250fdffcf7, type: 3}
 --- !u!1 &444681879
@@ -1948,6 +1953,7 @@ MonoBehaviour:
     soundClips:
     - {fileID: 0}
     visibilityToggle: 0
+  anim: {fileID: 1113432333}
 --- !u!1 &447176454
 GameObject:
   m_ObjectHideFlags: 0
@@ -5438,6 +5444,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &1113432333 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: c43d3e1459d196b4fa2218250fdffcf7,
+    type: 3}
+  m_PrefabInstance: {fileID: 395295066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1120637816
 GameObject:
   m_ObjectHideFlags: 0

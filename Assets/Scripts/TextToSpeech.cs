@@ -12,6 +12,12 @@ public class TextToSpeech : MonoBehaviour
 {
     public TextMesh debugText;
     public SoundFX sound;
+    public Animator anim;
+
+    void Start()
+    {
+        StartCoroutine(PlayCloudAudio("1"));
+    }
 
 
     // Update is called once per frame
@@ -42,6 +48,7 @@ public class TextToSpeech : MonoBehaviour
         yield return www;
         sound.soundClips[0] = www.GetAudioClip(false, true, AudioType.MPEG);
         debugText.text = "Finished playing";
+        anim.Play("Talk");
         sound.PlaySound();
     }
 }
