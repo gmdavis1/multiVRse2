@@ -6,17 +6,31 @@ namespace OVR
 
 public class TestScript : MonoBehaviour {
 
-    public SoundFX          test;
+	[InspectorNote( "Sound Setup", "Press '1' to play testSound1 and '2' to play testSound2")]
+
+	public SoundFXRef       testSound1;
+	public SoundFXRef       testSound2;
 
 	// Use this for initialization
-	IEnumerator Start () {
-        string url = "https://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&textlen=32&client=tw-ob&q=test&tl=En-US";
-        WWW www = new WWW(url);
-        yield return www;
+	void Start () {
+	
+	}
+	
 
-        test.soundClips[0] = www.GetAudioClip(false, true, AudioType.MPEG);
-        test.PlaySound();
-    }
+	// Update is called once per frame
+	void Update () 
+    {
+	    // use attached game object location
+        if ( Input.GetKeyDown( KeyCode.Alpha1 ) ) 
+        {
+			testSound1.PlaySoundAt( transform.position );
+		}
+
+        // hard code information
+		if ( Input.GetKeyDown( KeyCode.Alpha2 ) ) {
+			testSound2.PlaySoundAt( new Vector3( 5.0f, 0.0f, 0.0f ) );
+		}
+	}
 }
 
 } // namespace OVR

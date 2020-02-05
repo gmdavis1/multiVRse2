@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/garage.unity
+    guid: 695ed7b19cfeb624a94b9cc5d89cd648
   m_configObjects: {}
