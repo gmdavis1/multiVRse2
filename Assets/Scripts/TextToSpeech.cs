@@ -6,25 +6,47 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine.Networking;
-using OVR;
 
 public class TextToSpeech : MonoBehaviour
 {
-    public TextMesh debugText;
-    public SoundFX sound;
+    public AudioSource audioSource;
+    //public AudioClip clip;
     public Animator anim;
+    public float volume = 0.5f;
 
     void Start()
     {
-        StartCoroutine(PlayCloudAudio("1"));
+        //StartCoroutine(TestAudio());
+        StartCoroutine(PlayCloudAudio("0"));
     }
-
 
     // Update is called once per frame
     void Update()
     {
         StartCoroutine(GetText());
     }
+
+    //IEnumerator TestAudio()
+    //{
+    //    string url = "https://file-examples-com.github.io/uploads/2017/11/file_example_OOG_1MG.ogg";
+    //    Debug.Log("Accessing file at " + url);
+    //    using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.OGGVORBIS))
+    //    {
+    //        yield return www.SendWebRequest();
+
+    //        if (www.isHttpError)
+    //        {
+    //            Debug.Log(www.error);
+    //        }
+    //        else
+    //        {
+    //            AudioClip myClip = DownloadHandlerAudioClip.GetContent(www);
+    //            anim.Play("Talk");
+    //            audioSource.PlayOneShot(myClip, volume);
+    //            Debug.Log("Finished playing " + url);
+    //        }
+    //    }
+    //}
 
     IEnumerator GetText()
     {
@@ -42,13 +64,23 @@ public class TextToSpeech : MonoBehaviour
 
     IEnumerator PlayCloudAudio(string num)
     {
-        debugText.text = num;
         string url = "http://gmdavis.pythonanywhere.com/multivrse/" + num;
-        WWW www = new WWW(url);
-        yield return www;
-        sound.soundClips[0] = www.GetAudioClip(false, true, AudioType.MPEG);
-        debugText.text = "Finished playing";
-        anim.Play("Talk");
-        sound.PlaySound();
+        Debug.Log("Accessing file at " + url);
+        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                AudioClip myClip = DownloadHandlerAudioClip.GetContent(www);
+                anim.Play("Talk");
+                audioSource.PlayOneShot(myClip, volume);
+                Debug.Log("Finished playing " + url);
+            }
+        }
     }
 }
