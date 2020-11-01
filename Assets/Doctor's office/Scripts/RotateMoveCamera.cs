@@ -23,32 +23,36 @@ public class RotateMoveCamera : MonoBehaviour
     {
         var x = Input.GetAxis("Mouse X");
         var y = Input.GetAxis("Mouse Y");
-        if (x != MouseX || y != MouseY)
-        {
-            rotationX += x * sensX * Time.deltaTime;
-            rotationY += y * sensY * Time.deltaTime;
-            rotationY = Mathf.Clamp(rotationY, minY, maxY);
-            MouseX = x;
-            MouseY = y;
-            Camera.transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
-        }
+        //if (x != MouseX || y != MouseY)
+        //{
+        //    rotationX += x * sensX * Time.deltaTime;
+        //    rotationY += y * sensY * Time.deltaTime;
+        //    rotationY = Mathf.Clamp(rotationY, minY, maxY);
+        //    MouseX = x;
+        //    MouseY = y;
+        //    Camera.transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+        //}
         if (Input.GetKey(KeyCode.W))
         { // al precionar la tecla.W))
+            GetComponent<CameraController>().flag = false;
             transform.Translate(new Vector3(0, 0, 0.1f)); //cambiar posision.trasladar (aun nuevo vector(usando estas codenadas)
         }
         else {
             if (Input.GetKey(KeyCode.S))
             {
+                GetComponent<CameraController>().flag = false;
                 transform.Translate(new Vector3(0, 0, -0.1f)); //cambiar posision.trasladar (aun nuevo vector(usando estas codenadas)
             }
         }
         if (Input.GetKey(KeyCode.D))
         {
+            GetComponent<CameraController>().flag = false;
             transform.Translate(new Vector3(0.1f, 0, 0)); //cambiar posision.trasladar (aun nuevo vector(usando estas codenadas)
         }
         else {
             if (Input.GetKey(KeyCode.A))
             {
+                GetComponent<CameraController>().flag = false;
                 transform.Translate(new Vector3(-0.1f, 0, 0)); //cambiar posision.trasladar (aun nuevo vector(usando estas codenadas)
             }
         }
