@@ -17,7 +17,7 @@ public class TextToSpeech : MonoBehaviour
     void Start()
     {
         //StartCoroutine(TestAudio());
-        StartCoroutine(PlayCloudAudio("0"));
+     //   StartCoroutine(PlayCloudAudio("0"));
     }
 
     // Update is called once per frame
@@ -57,7 +57,13 @@ public class TextToSpeech : MonoBehaviour
         {
             if (www.downloadHandler.text != "")
             {
+                FindObjectOfType<MechanicSceneUIManager>().WebText.text = www.downloadHandler.text;
+                Debug.Log(www.downloadHandler.text);
                 StartCoroutine(PlayCloudAudio(www.downloadHandler.text));
+            }
+            else
+            {
+                Debug.Log(www.downloadHandler.text);
             }
         }
     }
@@ -65,22 +71,40 @@ public class TextToSpeech : MonoBehaviour
     IEnumerator PlayCloudAudio(string num)
     {
         string url = "http://gmdavis.pythonanywhere.com/multivrse/" + num;
+        UnityWebRequest www = UnityWebRequest.Get(url);
         Debug.Log("Accessing file at " + url);
-        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG))
+        if (!(www.isNetworkError || www.isHttpError))
         {
-            yield return www.SendWebRequest();
-
-            if (www.isHttpError)
+            if (www.downloadHandler.text != "")
             {
-                Debug.Log(www.error);
+               // FindObjectOfType<MechanicSceneUIManager>().WebText.text = www.downloadHandler.text;
+                Debug.Log("data" + www.downloadHandler.text);               // StartCoroutine(PlayCloudAudio(www.downloadHandler.text));
             }
             else
             {
-                AudioClip myClip = DownloadHandlerAudioClip.GetContent(www);
-                anim.Play("Talk");
-                audioSource.PlayOneShot(myClip, volume);
-                Debug.Log("Finished playing " + url);
+                Debug.Log(www.downloadHandler.text);
             }
         }
+        else
+        {
+            Debug.Log("error");
+        }
+        yield return new  WaitForSeconds(1f);
+        //using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG))
+        //{
+        //    yield return www.SendWebRequest();
+
+        //    if (www.isHttpError)
+        //    {
+        //        Debug.Log(www.error);
+        //    }
+        //    else
+        //    {
+        //        AudioClip myClip = DownloadHandlerAudioClip.GetContent(www);
+        //        anim.Play("Talk");
+        //        audioSource.PlayOneShot(myClip, volume);
+        //        Debug.Log("Finished playing " + url);
+        //    }
+        //}
     }
 }

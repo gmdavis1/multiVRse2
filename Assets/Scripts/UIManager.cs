@@ -9,12 +9,17 @@ public class UIManager : MonoBehaviour
     public string Explainations;
     int count;
     public Text TextExplain, NameText, PhoneText;
-    public GameObject NextButton,GetName,GetPhone,GetGoals,GetNotes;
+    public GameObject NextButton,GetName,GetPhone,GetGoals,GetNotes,LoadingScreen;
     public Text[] GoalsText,NotesText;
+    public Text progressTExt;
+    public Image Slider;
+    public int NextScene;
+    AsyncOperation sync;
+    Scene scene;
     // Start is called before the first frame update
     void Start()
     {
-      //  DontDestroyOnLoad(gameObject);
+        //  DontDestroyOnLoad(gameObject);
         StartCoroutine(PlayText());
     }
 
@@ -31,24 +36,24 @@ public class UIManager : MonoBehaviour
 
     IEnumerator PlayText()
     {
-        foreach (char c in Explainations)
-        {   if(count >0)
-            {
+        //foreach (char c in Explainations)
+        //{   if(count >0)
+        //    {
                 
-            }
-            TextExplain.text += c;
-            yield return new WaitForSeconds(0.01f);
-        }
-        count++;
-        yield return new WaitForSeconds(0.1f);
-        if(count < Explainations.Length)
-        {
-            NextButton.SetActive(true);
-        }
-        else
-        {
+        //    }
+        //    TextExplain.text += c;
+        //    yield return new WaitForSeconds(0.01f);
+        //}
+        //count++;
+        yield return new WaitForSeconds(1.5f);
+        //if(count < Explainations.Length)
+        //{
+        //    NextButton.SetActive(true);
+        //}
+        //else
+        //{
             Invoke("GetNameEnabled", 1f);
-        }
+        //}
 
     }
 
@@ -59,8 +64,10 @@ public class UIManager : MonoBehaviour
             TextExplain.text += "\n";
             TextExplain.text += "\n";
             TextExplain.text += "Your Name : " + NameText.text;
+            TextExplain.text += "\n";
+            TextExplain.text += "Phone Number : 650-387-9745" ;
             GetName.SetActive(false);
-            Invoke("GetPhoneEnabled", 1f);
+            Invoke("GetNotesEnabled", 1f);
         }
 
         else if (name == "OkayPhone")
@@ -68,7 +75,7 @@ public class UIManager : MonoBehaviour
             TextExplain.text += "\n";
             TextExplain.text += "Phone Number : "+PhoneText.text;
             GetPhone.SetActive(false);
-            Invoke("GetGoalsEnabled", 1f);
+            Invoke("GetNotesEnabled", 1f);
         }
 
         else if (name == "OkayGoals")
@@ -78,7 +85,7 @@ public class UIManager : MonoBehaviour
             PlayerPrefs.SetString("Goal2", GoalsText[2].text);
             PlayerPrefs.SetString("Goal3", GoalsText[3].text);
             GetGoals.SetActive(false);
-            Invoke("GetNotesEnabled", 1f);
+            //Invoke("GetNotesEnabled", 1f);
         }
 
         else if (name == "OkayNotes")
@@ -87,9 +94,10 @@ public class UIManager : MonoBehaviour
             PlayerPrefs.SetString("Note1", NotesText[1].text);
             PlayerPrefs.SetString("Note2", NotesText[2].text);
             PlayerPrefs.SetString("Note3", NotesText[3].text);
+            //SceneManager.LoadScene(1);
             GetNotes.SetActive(false);
-            Invoke("GetNotesEnabled", 1f);
-            SceneManager.LoadScene(1);
+          //  Invoke("GetNotesEnabled", 1f);
+            StartCoroutine(LoadingCoroutine());
         }
     }
 
@@ -108,5 +116,26 @@ public class UIManager : MonoBehaviour
     void GetNotesEnabled()
     {
         GetNotes.SetActive(true);
+    }
+
+    IEnumerator LoadingCoroutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        LoadingScreen.SetActive(true);
+        sync = SceneManager.LoadSceneAsync(NextScene);
+        sync.allowSceneActivation = false;
+        while (sync.isDone == false)
+        {
+            yield return new WaitForSeconds(2.9f);
+
+            Slider.fillAmount = sync.progress - 0.8f;
+            yield return new WaitForSeconds(0.9f);
+            if (sync.progress == 0.9f)
+            {
+                Slider.fillAmount = 1f;
+                sync.allowSceneActivation = true;
+            }
+            yield return null;
+        }
     }
 }
