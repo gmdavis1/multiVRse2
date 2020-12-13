@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         //  DontDestroyOnLoad(gameObject);
+        GetName.SetActive(true);
         StartCoroutine(PlayText());
     }
 
@@ -30,7 +31,7 @@ public class UIManager : MonoBehaviour
     }
     public void OnClickNextIntro()
     {
-        Invoke("GetNameEnabled", 1f);
+        StartCoroutine(LoadingCoroutine());
         NextButton.SetActive(false);
     }
 
@@ -45,14 +46,15 @@ public class UIManager : MonoBehaviour
         //    yield return new WaitForSeconds(0.01f);
         //}
         //count++;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(10f);
+        NextButton.SetActive(true);
         //if(count < Explainations.Length)
         //{
         //    NextButton.SetActive(true);
         //}
         //else
         //{
-            Invoke("GetNameEnabled", 1f);
+        //Invoke("GetNameEnabled", 1f);
         //}
 
     }
@@ -61,13 +63,11 @@ public class UIManager : MonoBehaviour
     {
         if(name == "OkayName")
         {
-            TextExplain.text += "\n";
-            TextExplain.text += "\n";
-            TextExplain.text += "Your Name : " + NameText.text;
-            TextExplain.text += "\n";
-            TextExplain.text += "Phone Number : 650-387-9745" ;
+            string added_text = "Your Name : " + NameText.text + "\n" + "Phone Number : 650-387-9745" + "\n\n";
+            TextExplain.text = added_text + TextExplain.text;
             GetName.SetActive(false);
-            Invoke("GetNotesEnabled", 1f);
+            //Invoke("GetNotesEnabled", 1f);
+            
         }
 
         else if (name == "OkayPhone")
@@ -97,7 +97,7 @@ public class UIManager : MonoBehaviour
             //SceneManager.LoadScene(1);
             GetNotes.SetActive(false);
           //  Invoke("GetNotesEnabled", 1f);
-            StartCoroutine(LoadingCoroutine());
+            
         }
     }
 
@@ -120,7 +120,7 @@ public class UIManager : MonoBehaviour
 
     IEnumerator LoadingCoroutine()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         LoadingScreen.SetActive(true);
         sync = SceneManager.LoadSceneAsync(NextScene);
         sync.allowSceneActivation = false;

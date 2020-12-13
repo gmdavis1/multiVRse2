@@ -89,22 +89,22 @@ public class TextToSpeech : MonoBehaviour
         {
             Debug.Log("error");
         }
-        yield return new  WaitForSeconds(1f);
-        //using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG))
-        //{
-        //    yield return www.SendWebRequest();
+        yield return new WaitForSeconds(1f);
+        using (www = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG))
+        {
+            yield return www.SendWebRequest();
 
-        //    if (www.isHttpError)
-        //    {
-        //        Debug.Log(www.error);
-        //    }
-        //    else
-        //    {
-        //        AudioClip myClip = DownloadHandlerAudioClip.GetContent(www);
-        //        anim.Play("Talk");
-        //        audioSource.PlayOneShot(myClip, volume);
-        //        Debug.Log("Finished playing " + url);
-        //    }
-        //}
+            if (www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                AudioClip myClip = DownloadHandlerAudioClip.GetContent(www);
+                anim.Play("Talk");
+                audioSource.PlayOneShot(myClip, volume);
+                Debug.Log("Finished playing " + url);
+            }
+        }
     }
 }

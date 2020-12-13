@@ -1579,22 +1579,22 @@ MonoBehaviour:
   m_Text: "You live in the US. You drive your car (2018 Toyota Camry with 25,000
     miles) to and from work every day, about 20 miles each way. You take your car
     in for scheduled oil changes every 5,000 miles and haven\u2019t had any problems
-    that needed repair before now.  Over the last week, you\u2019ve noticed some
+    that needed repair before now. \n\nOver the last week, you\u2019ve noticed some
     odd behavior. A few times last week, you heard a ticking noise from the engine
     for a few minutes. On Wednesday, you smelled a burning smell coming through the
     vents as you were getting off the highway, but the odor stopped after you arrived
     at work. You have also found some wet spots in your home garage underneath where
     you normally park your car. None of the indicators or gauges on the dashboard
-    have shown anything wrong though; everything looks normal.  Yesterday, you were
-    driving home from work and steam started pouring out of the hood. You pulled
+    have shown anything wrong though; everything looks normal. \n\nYesterday, you
+    were driving home from work and steam started pouring out of the hood. You pulled
     over and stopped on the side of the road and your car wouldn\u2019t start again,
-    even after waiting 10 minutes for the steam to go away. You had your car towed
+    even after waiting 10 minutes for the steam to go away.\n\nYou had your car towed
     to the mechanic shop and now you are talking to the mechanic to get your car
     fixed. You have an extended warranty that covers repairs until 30,000 miles,
-    so you shouldn\u2019t have to pay to get the car fixed.  Today is Saturday. You
-    will need a car to drive to work on Monday morning. Your warranty is going to
-    run out in a few months. Your goals are to get your car fixed and be able to
-    get to work on Monday and make sure there are no other parts that will break
+    so you shouldn\u2019t have to pay to get the car fixed. \n\nToday is Saturday.
+    You will need a car to drive to work on Monday morning. Your warranty is going
+    to run out in a few months. Your goals are to get your car fixed and be able
+    to get to work on Monday and make sure there are no other parts that will break
     down soon. "
 --- !u!222 &473837777
 CanvasRenderer:
@@ -2419,7 +2419,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1399599566}
   m_HandleRect: {fileID: 1399599565}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 1.0000004
   m_Size: 0.83654225
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2620,6 +2620,7 @@ MonoBehaviour:
   - {fileID: 2128919852}
   progressTExt: {fileID: 0}
   Slider: {fileID: 1131620675}
+  NextScene: 1
 --- !u!1 &951463716
 GameObject:
   m_ObjectHideFlags: 0
