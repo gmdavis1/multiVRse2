@@ -104,10 +104,10 @@ public class CharacterCustomize : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update ()
-	{
-		
-	}
+	//void Update ()
+	//{
+	//	
+	//}
 
 	public void charCustomize (int face, int eye, int top, int bottom, int hairT, int hairC, int skinT)
 	{
