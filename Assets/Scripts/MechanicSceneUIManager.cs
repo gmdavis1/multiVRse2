@@ -6,12 +6,19 @@ using UnityEngine.UI;
 
 public class MechanicSceneUIManager : MonoBehaviour
 {
+    [SerializeField] private GameObject IntroCanvas = null;
+
     public GameObject LoadingScreen;
     public Image Slider;
     public Text GoalsText,NotesText,WebText;
-    public int NextScene;
+    public string NextSceneName = string.Empty;
     AsyncOperation sync;
-    // Start is called before the first frame update
+
+    private void Awake()
+    {
+        IntroCanvas.SetActive(true);
+    }
+
     void Start()
     {
      //   GoalsText.text = "YOUR GOALS";
@@ -24,34 +31,25 @@ public class MechanicSceneUIManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void OnClick()
     {
         StartCoroutine(LoadingCoroutine());
     }
 
+    public void OpenIntroCanvas()
+    {
+        IntroCanvas.SetActive(true);
+    }
+
     IEnumerator LoadingCoroutine()
     {
-        yield return new WaitForSeconds(0.5f);
         LoadingScreen.SetActive(true);
-        sync = SceneManager.LoadSceneAsync(NextScene);
-        sync.allowSceneActivation = false;
+        sync = SceneManager.LoadSceneAsync(NextSceneName, LoadSceneMode.Single);
+        sync.allowSceneActivation = true;
         while (sync.isDone == false)
         {
-            yield return new WaitForSeconds(2.9f);
-
-            Slider.fillAmount = sync.progress - 0.8f;
-            yield return new WaitForSeconds(0.9f);
-            if (sync.progress == 0.9f)
-            {
-                Slider.fillAmount = 1f;
-                sync.allowSceneActivation = true;
-            }
             yield return null;
+            Slider.fillAmount = sync.progress;
         }
     }
 }

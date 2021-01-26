@@ -71,26 +71,29 @@ public class TextToSpeech : MonoBehaviour
     IEnumerator PlayCloudAudio(string num)
     {
         string url = "http://gmdavis.pythonanywhere.com/multivrse/" + num;
-        UnityWebRequest www = UnityWebRequest.Get(url);
-        Debug.Log("Accessing file at " + url);
-        if (!(www.isNetworkError || www.isHttpError))
+        using (UnityWebRequest www = UnityWebRequest.Get(url))
         {
-            if (www.downloadHandler.text != "")
+            Debug.Log("Accessing file at " + url);
+            if (!(www.isNetworkError || www.isHttpError))
             {
-               // FindObjectOfType<MechanicSceneUIManager>().WebText.text = www.downloadHandler.text;
-                Debug.Log("data" + www.downloadHandler.text);               // StartCoroutine(PlayCloudAudio(www.downloadHandler.text));
+                if (www.downloadHandler.text != "")
+                {
+                    // FindObjectOfType<MechanicSceneUIManager>().WebText.text = www.downloadHandler.text;
+                    Debug.Log("data" + www.downloadHandler.text);               // StartCoroutine(PlayCloudAudio(www.downloadHandler.text));
+                }
+                else
+                {
+                    Debug.Log(www.downloadHandler.text);
+                }
             }
             else
             {
-                Debug.Log(www.downloadHandler.text);
+                Debug.Log("error");
             }
         }
-        else
-        {
-            Debug.Log("error");
-        }
+
         yield return new WaitForSeconds(1f);
-        using (www = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG))
+        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG))
         {
             yield return www.SendWebRequest();
 

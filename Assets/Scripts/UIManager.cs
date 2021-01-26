@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    [SerializeField] private GameObject UserNotes = null;
+
+    [TextArea]
     public string Explainations;
     int count;
     public Text TextExplain, NameText, PhoneText;
@@ -16,6 +19,7 @@ public class UIManager : MonoBehaviour
     public int NextScene;
     AsyncOperation sync;
     Scene scene;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,15 +28,11 @@ public class UIManager : MonoBehaviour
         StartCoroutine(PlayText());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void OnClickNextIntro()
     {
-        StartCoroutine(LoadingCoroutine());
-        NextButton.SetActive(false);
+        gameObject.SetActive(false);
+        //StartCoroutine(LoadingCoroutine());
+        //NextButton.SetActive(false);
     }
 
     IEnumerator PlayText()
@@ -99,6 +99,11 @@ public class UIManager : MonoBehaviour
           //  Invoke("GetNotesEnabled", 1f);
             
         }
+    }
+
+    public void OnToggleNotesClicked()
+    {
+        UserNotes.SetActive(!UserNotes.activeSelf);
     }
 
     void GetNameEnabled()

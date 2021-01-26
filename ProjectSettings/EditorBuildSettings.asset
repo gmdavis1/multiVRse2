@@ -6,14 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Intoduction.unity
-    guid: 9636cbaeb9a1d5d44a0d4ef636861d5c
-  - enabled: 1
     path: Assets/Scenes/garage.unity
     guid: 695ed7b19cfeb624a94b9cc5d89cd648
-  - enabled: 1
-    path: Assets/Scenes/Doc Intoduction.unity
-    guid: b6b4758e0f6ba8341912d35d70019652
   - enabled: 1
     path: Assets/Scenes/doctor.unity
     guid: 8b6998aa150444b9eb865c02c414a6a1
