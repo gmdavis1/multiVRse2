@@ -8973,11 +8973,6 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0.16345775
       objectReference: {fileID: 0}
-    - target: {fileID: 6885695947242041410, guid: 8546fff591bf895489c03365a610ef50,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6885695947614511379, guid: 8546fff591bf895489c03365a610ef50,
         type: 3}
       propertyPath: m_Name
@@ -8987,11 +8982,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6885695947614511382, guid: 8546fff591bf895489c03365a610ef50,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6885695947614511383, guid: 8546fff591bf895489c03365a610ef50,
         type: 3}
@@ -9108,14 +9098,14 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1550883614 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8061114282056932303, guid: 8546fff591bf895489c03365a610ef50,
+  m_CorrespondingSourceObject: {fileID: 7138111844145038164, guid: 8546fff591bf895489c03365a610ef50,
     type: 3}
   m_PrefabInstance: {fileID: 1550883612}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1566623006
@@ -10878,7 +10868,7 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_ForceModuleActive: 1
 --- !u!114 &1910412920
 MonoBehaviour:
   m_ObjectHideFlags: 0
