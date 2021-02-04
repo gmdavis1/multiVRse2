@@ -787,7 +787,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -4, y: -4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180875586
 MonoBehaviour:
@@ -8972,6 +8972,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.y
       value: 0.16345775
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885695947001069536, guid: 8546fff591bf895489c03365a610ef50,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u4E2D\u6587\u53EF\u4EE5\u4E2D\u6587\u53EF\u4EE5\u4E2D\u6587\u53EF\u4EE5\u3002\n\n\nYou
+        live in the US. You drive your car (2018 Toyota Camry with 25,000 miles)
+        to and from work every day, about 20 miles each way. You take your car in
+        for scheduled oil changes every 5,000 miles and haven\u2019t had any problems
+        that needed repair before now.  Over the last week, you\u2019ve noticed some
+        odd behavior. A few times last week, you heard a ticking noise from the engine
+        for a few minutes. On Wednesday, you smelled a burning smell coming through
+        the vents as you were getting off the highway, but the odor stopped after
+        you arrived at work. You have also found some wet spots in your home garage
+        underneath where you normally park your car. None of the indicators or gauges
+        on the dashboard have shown anything wrong though; everything looks normal. 
+        Yesterday, you were driving home from work and steam started pouring out
+        of the hood. You pulled over and stopped on the side of the road and your
+        car wouldn\u2019t start again, even after waiting 10 minutes for the steam
+        to go away. You had your car towed to the mechanic shop and now you are talking
+        to the mechanic to get your car fixed. You have an extended warranty that
+        covers repairs until 30,000 miles, so you shouldn\u2019t have to pay to get
+        the car fixed.  Today is Saturday. You will need a car to drive to work on
+        Monday morning. Your warranty is going to run out in a few months. Your goals
+        are to get your car fixed and be able to get to work on Monday and make sure
+        there are no other parts that will break down soon. "
       objectReference: {fileID: 0}
     - target: {fileID: 6885695947614511379, guid: 8546fff591bf895489c03365a610ef50,
         type: 3}
