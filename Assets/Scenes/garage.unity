@@ -7647,6 +7647,7 @@ MonoBehaviour:
   audioSource: {fileID: 1502744292}
   anim: {fileID: 1113432333}
   volume: 0.5
+  mechanicSceneUIManager: {fileID: 2110679643}
 --- !u!114 &1380583535
 MonoBehaviour:
   m_ObjectHideFlags: 0

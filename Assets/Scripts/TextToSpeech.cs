@@ -14,8 +14,15 @@ public class TextToSpeech : MonoBehaviour
     public Animator anim;
     public float volume = 0.5f;
 
+    [SerializeField] private MechanicSceneUIManager mechanicSceneUIManager = null;
+
     void Start()
     {
+        //Find instance if it's not set
+        if (mechanicSceneUIManager == null)
+        {
+            mechanicSceneUIManager = FindObjectOfType<MechanicSceneUIManager>();
+        }
         //StartCoroutine(TestAudio());
      //   StartCoroutine(PlayCloudAudio("0"));
     }
@@ -23,6 +30,7 @@ public class TextToSpeech : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //StartCoroutine(PlayCloudAudio("1.mp3"));
         StartCoroutine(GetText());
     }
 
@@ -50,36 +58,44 @@ public class TextToSpeech : MonoBehaviour
 
     IEnumerator GetText()
     {
-        UnityWebRequest www = UnityWebRequest.Get("http://gmdavis.pythonanywhere.com/multivrse");
-        yield return www.SendWebRequest();
-
-        if (! (www.isNetworkError || www.isHttpError))
+        using (UnityWebRequest www = UnityWebRequest.Get("http://gmdavis.pythonanywhere.com/multivrse"))
         {
-            if (www.downloadHandler.text != "")
+            yield return www.SendWebRequest();
+
+            if (!(www.isNetworkError || www.isHttpError))
             {
-                FindObjectOfType<MechanicSceneUIManager>().WebText.text = www.downloadHandler.text;
-                Debug.Log(www.downloadHandler.text);
-                StartCoroutine(PlayCloudAudio(www.downloadHandler.text));
-            }
-            else
-            {
-                Debug.Log(www.downloadHandler.text);
+                if (string.IsNullOrEmpty(www.downloadHandler.text) == false)
+                {
+                    if (mechanicSceneUIManager != null)
+                    {
+                        mechanicSceneUIManager.WebText.text = www.downloadHandler.text;
+                    }
+                    else
+                    {
+                        Debug.LogWarning("No scene UI manager to display text corresponding to audio!");
+                    }
+                    Debug.Log(www.downloadHandler.text);
+                    StartCoroutine(PlayCloudAudio(www.downloadHandler.text));
+                }
+                else
+                {
+                    Debug.Log(www.downloadHandler.text);
+                }
             }
         }
     }
 
     IEnumerator PlayCloudAudio(string num)
     {
-        string url = "http://gmdavis.pythonanywhere.com/multivrse/" + num;
+        string url = "https://multivrse-audio.s3.us-east-2.amazonaws.com/" + num;
         using (UnityWebRequest www = UnityWebRequest.Get(url))
         {
             Debug.Log("Accessing file at " + url);
             if (!(www.isNetworkError || www.isHttpError))
             {
-                if (www.downloadHandler.text != "")
+                if (string.IsNullOrEmpty(www.downloadHandler.text) == false)
                 {
-                    // FindObjectOfType<MechanicSceneUIManager>().WebText.text = www.downloadHandler.text;
-                    Debug.Log("data" + www.downloadHandler.text);               // StartCoroutine(PlayCloudAudio(www.downloadHandler.text));
+                    Debug.Log("data" + www.downloadHandler.text);
                 }
                 else
                 {
