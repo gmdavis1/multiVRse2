@@ -6,7 +6,7 @@ using NativeWebSocket;
 
 public class WebSocketHandler : MonoBehaviour
 {
-    private const string SOCKET_URL = "wss://rfgjune292.execute-api.us-east-2.amazonaws.com/production";
+    private const string SOCKET_URL = "wss://e5pvp3ghmc.execute-api.us-east-2.amazonaws.com/Prod";
 
     private WebSocket Socket = null;
 
