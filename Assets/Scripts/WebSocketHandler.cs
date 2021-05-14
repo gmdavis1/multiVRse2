@@ -2,11 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using NativeWebSocket;
 
 public class WebSocketHandler : MonoBehaviour
 {
     private const string SOCKET_URL = "wss://e5pvp3ghmc.execute-api.us-east-2.amazonaws.com/Prod";
+
+    public OnSocketMessageReceived SocketMessageEvent = new OnSocketMessageReceived();
 
     private WebSocket Socket = null;
 
@@ -36,15 +39,15 @@ public class WebSocketHandler : MonoBehaviour
             Socket.DispatchMessageQueue();
         #endif
 
-        if (Input.GetKeyDown(KeyCode.Space) == true)
-        {
-            SendSocketMessage();
-        }
+        //if (Input.GetKeyDown(KeyCode.Space) == true)
+        //{
+        //    SendSocketMessage();
+        //}
     }
 
     private void OnDestroy()
     {
-        
+        SocketMessageEvent.RemoveAllListeners();
     }
 
     private async void SendSocketMessage()
@@ -67,7 +70,7 @@ public class WebSocketHandler : MonoBehaviour
         //    }
         //}
 
-        if (Socket.State == WebSocketState.Open)
+        /*if (Socket.State == WebSocketState.Open)
         {
             Debug.Log("Sending text...");
 
@@ -76,7 +79,7 @@ public class WebSocketHandler : MonoBehaviour
             await Socket.SendText(text);
 
             Debug.Log("Send complete!");
-        }
+        }*/
 
         //await Socket.Receive();
     }
@@ -116,11 +119,62 @@ public class WebSocketHandler : MonoBehaviour
         //Get the message as a string
         string message = System.Text.Encoding.UTF8.GetString(data);
         Debug.Log($"Message received | Data length: {data.Length} | Message: {message}");
+
+        SocketData socketData = null;
+
+        try
+        {
+            socketData = JsonUtility.FromJson<SocketData>(message);
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"Error parsing JSON: {e.Message}");
+            return;
+        }
+
+        if (System.Enum.TryParse(socketData.action, true, out SocketActions socketAction) == false)
+        {
+            Debug.LogError($"Invalid action: {socketData.action}");
+            return;
+        }
+
+        SocketResponse socketResponse = new SocketResponse(socketData.scene, socketAction, socketData.value);
+
+        SocketMessageEvent.Invoke(socketResponse);
     }
 
     [System.Serializable]
-    public class SrcAction
+    public class OnSocketMessageReceived : UnityEvent<SocketResponse>
     {
-        public string action = string.Empty;
+
     }
+
+    [System.Serializable]
+    public struct SocketResponse
+    {
+        public string Scene;
+        public SocketActions Action;
+        public string Value;
+
+        public SocketResponse(string scene, in SocketActions action, string value)
+        {
+            Scene = scene;
+            Action = action;
+            Value = value;
+        }
+    }
+
+    [System.Serializable]
+    private class SocketData
+    {
+        public string scene = string.Empty;
+        public string action = string.Empty;
+        public string value = string.Empty;
+    }
+
+    //[System.Serializable]
+    //public class SrcAction
+    //{
+    //    public string action = string.Empty;
+    //}
 }
