@@ -1,104 +1,104 @@
 fileFormatVersion: 2
 guid: c43d3e1459d196b4fa2218250fdffcf7
 ModelImporter:
-  serializedVersion: 25
+  serializedVersion: 19301
   internalIDToNameTable:
   - first:
       43: 4300000
     second: man
   - first:
       74: 7400000
-    second: man //// man_994
+    second: man
   - first:
       74: 7400002
-    second: boring //// man_994
+    second: boring
   - first:
       74: 7400004
-    second: Drinking //// man_994
+    second: Drinking
   - first:
       74: 7400006
-    second: Eating //// man_994
+    second: Eating
   - first:
       74: 7400008
-    second: Explanation //// man_994
+    second: Explanation
   - first:
       74: 7400010
-    second: Looking_around //// man_994
+    second: Looking_around
   - first:
       74: 7400012
-    second: Reject //// man_994
+    second: Reject
   - first:
       74: 7400014
-    second: Going_asleep //// man_994
+    second: Going_asleep
   - first:
       74: 7400016
-    second: sleeping //// man_994
+    second: sleeping
   - first:
       74: 7400018
-    second: Waking_up //// man_994
+    second: Waking_up
   - first:
       74: 7400020
-    second: Run //// man_994
+    second: Run
   - first:
       74: 7400022
-    second: Jump_runing //// man_994
+    second: Jump_runing
   - first:
       74: 7400024
-    second: Say_No //// man_994
+    second: Say_No
   - first:
       74: 7400026
-    second: Shrugs //// man_994
+    second: Shrugs
   - first:
       74: 7400028
-    second: sit_down //// man_994
+    second: sit_down
   - first:
       74: 7400030
-    second: came_up //// man_994
+    second: came_up
   - first:
       74: 7400032
-    second: StandingFree //// man_994
+    second: StandingFree
   - first:
       74: 7400034
-    second: Talking_A //// man_994
+    second: Talking_A
   - first:
       74: 7400036
-    second: Use_object //// man_994
+    second: Use_object
   - first:
       74: 7400038
-    second: Kiss //// man_994
+    second: Kiss
   - first:
       74: 7400040
-    second: pointing_A //// man_994
+    second: pointing_A
   - first:
       74: 7400042
-    second: Sneaking //// man_994
+    second: Sneaking
   - first:
       74: 7400044
-    second: walk //// man_994
+    second: walk
   - first:
       74: 7400046
-    second: walking_back //// man_994
+    second: walking_back
   - first:
       74: 7400048
-    second: Moving_left //// man_994
+    second: Moving_left
   - first:
       74: 7400050
-    second: Moving_right //// man_994
+    second: Moving_right
   - first:
       74: 7400052
-    second: Crawling //// man_994
+    second: Crawling
   - first:
       74: 7400054
-    second: Crouching //// man_994
+    second: Crouching
   - first:
       74: 7400056
-    second: Climbing_ladder //// man_994
+    second: Climbing_ladder
   - first:
       74: 7400058
-    second: Hit_from_front //// man_994
+    second: Hit_from_front
   - first:
       74: 7400060
-    second: Dying_A //// man_994
+    second: Dying_A
   - first:
       1001: 100100000
     second: DataTemplate __Singleton__
@@ -194,7 +194,7 @@ ModelImporter:
     second: Dying_A
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 3
     materialSearch: 1
     materialLocation: 0
@@ -1097,10 +1097,12 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -1127,7 +1129,6 @@ ModelImporter:
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -1145,8 +1146,10 @@ ModelImporter:
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
