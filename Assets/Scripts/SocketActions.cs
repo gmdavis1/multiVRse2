@@ -3,5 +3,6 @@
 public enum SocketActions
 {
     playaudio,
-    animation
+    animation,
+    changescene
 }

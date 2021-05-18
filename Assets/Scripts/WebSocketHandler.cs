@@ -134,7 +134,7 @@ public class WebSocketHandler : MonoBehaviour
 
         if (System.Enum.TryParse(socketData.action, true, out SocketActions socketAction) == false)
         {
-            Debug.LogError($"Invalid action: {socketData.action}");
+            Debug.LogWarning($"Received unrecognized socket action: {socketData.action}");
             return;
         }
 
