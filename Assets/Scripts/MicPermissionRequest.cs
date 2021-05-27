@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MicPermissionRequest : MonoBehaviour
 {
@@ -10,12 +11,19 @@ public class MicPermissionRequest : MonoBehaviour
 
     private Coroutine RequestingMicRoutine = null;
 
+    public readonly UnityEvent MicPermRequestCompleteEvent = new UnityEvent();
+
     private void Start()
     {
         if (RequestOnStart == true)
         {
             RequestMicPermission();
         }
+    }
+
+    private void OnDestroy()
+    {
+        MicPermRequestCompleteEvent.RemoveAllListeners();
     }
 
     public void RequestMicPermission()
@@ -40,7 +48,11 @@ public class MicPermissionRequest : MonoBehaviour
         }
 
         RequestingMicRoutine = null;
-#else 
+
+        MicPermRequestCompleteEvent.Invoke();
+#else
+        MicPermRequestCompleteEvent.Invoke();
+
         RequestingMicRoutine = null;
         yield break;
 #endif
