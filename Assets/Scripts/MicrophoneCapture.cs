@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using FrostweepGames.Plugins.Native;
 
 [RequireComponent(typeof(AudioSource))]
 public class MicrophoneCapture : MonoBehaviour
@@ -11,14 +12,14 @@ public class MicrophoneCapture : MonoBehaviour
     public bool IsMicConnected { get; private set; } = false;
 
     private int MinMicFrequency = 0;
-    private int MaxMicFrequency = 0;
+    private int MaxMicFrequency = 1;
 
-    [SerializeField] private MicPermissionRequest MicPermRequest = null;
-    [SerializeField] private int RecordClipDuration = 1;
-    [SerializeField] private float MinSpeakingLevel = 5f;
+    [SerializeField] private int RecordClipDuration = 60;
+    [SerializeField] private double VoiceThreshold = .02d;
+    [SerializeField] private float AverageVoiceLevel = .0001f;
 
     //null or an empty string indicates the default microphone
-    private string ChosenMic = string.Empty;
+    private string ChosenMic = null;
 
     private float[] ClipSampleData = new float[1024];
     public bool IsUserSpeaking = false;
@@ -28,48 +29,45 @@ public class MicrophoneCapture : MonoBehaviour
     public UnityEvent OnUserStartSpeaking = new UnityEvent();
     public UnityEvent OnUserStopSpeaking = new UnityEvent();
 
+    private Coroutine MicFetchRoutine = null;
+
     private void Awake()
     {
         AudioSrc = GetComponent<AudioSource>();
+    }
 
-        MicPermRequest.MicPermRequestCompleteEvent.RemoveListener(FetchMicAndStartRecording);
-        MicPermRequest.MicPermRequestCompleteEvent.AddListener(FetchMicAndStartRecording);
+    private void Start()
+    {
+        MicFetchRoutine = StartCoroutine(FetchMicAndStartRecording());
     }
 
     private void OnDestroy()
     {
-        MicPermRequest.MicPermRequestCompleteEvent.RemoveListener(FetchMicAndStartRecording);
-
         //End the recording if it started
         EndRecording(ChosenMic);
 
         OnUserStartSpeaking.RemoveAllListeners();
         OnUserStopSpeaking.RemoveAllListeners();
+
+        if (MicFetchRoutine != null)
+        {
+            StopCoroutine(MicFetchRoutine);
+            MicFetchRoutine = null;
+        }
     }
 
     private void Update()
     {
-        if (IsMicConnected == false)
+        if (IsMicConnected == false || CustomMicrophone.HasMicrophonePermission() == false)
         {
             return;
         }
 
-        //Start up the clip again if it stops to continue getting spectrum data
-        if (AudioSrc.isPlaying == false)
+        bool isSpeaking = CustomMicrophone.IsVoiceDetected(ChosenMic, AudioSrc.clip, ref AverageVoiceLevel, VoiceThreshold);
+
+        if (isSpeaking == true)
         {
-            AudioSrc.Play();
-        }
-
-        AudioSrc.GetSpectrumData(ClipSampleData, 0, FFTWindow.Rectangular);
-        float curAverageVolume = Average(ClipSampleData);
-
-#if UNITY_EDITOR
-        //Debug.Log($"AVERAGE VOLUME: {curAverageVolume}");
-#endif
-        AverageSpeakingVolume = curAverageVolume;
-
-        if (curAverageVolume > MinSpeakingLevel)
-        {
+            //Started speaking
             if (IsUserSpeaking == false)
             {
                 IsUserSpeaking = true;
@@ -85,21 +83,50 @@ public class MicrophoneCapture : MonoBehaviour
                 OnUserStopSpeaking.Invoke();
             }
         }
+
+        //Start up the clip again if it stops to continue getting spectrum data
+        /*if (AudioSrc.isPlaying == false)
+        {
+            AudioSrc.Play();
+        }
+
+        AudioSrc.GetSpectrumData(ClipSampleData, 0, FFTWindow.Rectangular);
+        float curAverageVolume = Average(ClipSampleData);
+
+#if UNITY_EDITOR
+        //Debug.Log($"AVERAGE VOLUME: {curAverageVolume}");
+#endif
+        AverageSpeakingVolume = curAverageVolume;
+
+        if (curAverageVolume > VoiceThreshold)
+        {
+            if (IsUserSpeaking == false)
+            {
+                IsUserSpeaking = true;
+                OnUserStartSpeaking.Invoke();
+            }
+        }
+        else
+        {
+            if (IsUserSpeaking == true)
+            {
+                //Stopped speaking
+                IsUserSpeaking = false;
+                OnUserStopSpeaking.Invoke();
+            }
+        }*/
     }
 
-    private void FetchMicAndStartRecording()
+    private IEnumerator FetchMicAndStartRecording()
     {
-        if (Application.HasUserAuthorization(UserAuthorization.Microphone) == false)
+        while (CustomMicrophone.HasMicrophonePermission() == false)
         {
-            Debug.Log("Cannot initialize microphone - permission denied.");
-
-            enabled = false;
-            return;
+            yield return null;
         }
 
         Debug.Log("Permission granted for microphone!");
 
-        string[] availableMics = Microphone.devices;
+        string[] availableMics = CustomMicrophone.devices;
 
         if (availableMics.Length <= 0)
         {
@@ -111,7 +138,7 @@ public class MicrophoneCapture : MonoBehaviour
         {
             IsMicConnected = true;
 
-            Microphone.GetDeviceCaps(null, out MinMicFrequency, out MaxMicFrequency);
+            CustomMicrophone.GetDeviceCaps(ChosenMic, out MinMicFrequency, out MaxMicFrequency);
 
             //If min and max frequency are 0, the microphone supports any frequency (according to Unity docs)
             if (MinMicFrequency == 0 && MaxMicFrequency == 0)
@@ -120,23 +147,33 @@ public class MicrophoneCapture : MonoBehaviour
                 MaxMicFrequency = 44100;
             }
 
+            Debug.Log($"Microphone has Min Frequency = {MinMicFrequency} and Max Frequency = {MaxMicFrequency}");
+
             StartRecording();
         }
+
+        MicFetchRoutine = null;
     }
 
     public void StartRecording()
     {
-        if (IsMicConnected == false)
+        if (CustomMicrophone.HasMicrophonePermission() == false)
         {
-            Debug.Log("No mic connected to start recording. You may have to grant permission to use the microphone.");
+            Debug.Log("No permission to use the microphone - unable to start recording.");
             return;
         }
 
-        AudioClip clip = Microphone.Start(ChosenMic, true, RecordClipDuration, MaxMicFrequency);
+        if (IsMicConnected == false)
+        {
+            Debug.Log("No mic connected to start recording.");
+            return;
+        }
+
+        AudioClip clip = CustomMicrophone.Start(ChosenMic, true, RecordClipDuration, MaxMicFrequency);
 
         if (clip == null)
         {
-            Debug.LogWarning("Failed to start recording!");
+            Debug.LogWarning($"Failed to start recording - {nameof(AudioClip)} from {nameof(CustomMicrophone.Start)} is null!");
             return;
         }
 
@@ -146,20 +183,26 @@ public class MicrophoneCapture : MonoBehaviour
         //To avoid the user hearing it, add an AudioMixerGroup with the Attenuation at -80 db
         //Then, set that mixer group as the Output on the AudioSource
         //We do it this way because setting the AudioSource's volume to 0 causes no spectrum data to be output
-        AudioSrc.Play();
+        //AudioSrc.Play();
     }
 
     public void EndRecording(string microphone)
     {
+        if (CustomMicrophone.HasMicrophonePermission() == false)
+        {
+            Debug.Log("No permission to use the microphone - unable to end recording.");
+            return;
+        }
+
         if (IsMicConnected == false)
         {
             Debug.Log("No microphone connected to end recording.");
             return;
         }
 
-        if (Microphone.IsRecording(microphone) == true)
+        if (CustomMicrophone.IsRecording(microphone) == true)
         {
-            Microphone.End(microphone);
+            CustomMicrophone.End(microphone);
 
             if (IsUserSpeaking == true)
             {

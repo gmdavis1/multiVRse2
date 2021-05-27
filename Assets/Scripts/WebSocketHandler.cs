@@ -50,8 +50,8 @@ public class WebSocketHandler : MonoBehaviour
         SocketMessageEvent.RemoveAllListeners();
     }
 
-    private async void SendSocketMessage()
-    {
+    //private async void SendSocketMessage()
+    //{
         //using (HttpClient client = new HttpClient())
         //{
         //    using (var request = new HttpRequestMessage(HttpMethod.Post, "https://dc368368.herokuapp.com/"))
@@ -82,7 +82,7 @@ public class WebSocketHandler : MonoBehaviour
         }*/
 
         //await Socket.Receive();
-    }
+    //}
 
     private async void OnApplicationQuit()
     {

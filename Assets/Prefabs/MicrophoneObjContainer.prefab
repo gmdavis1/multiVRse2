@@ -331,8 +331,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MicPermRequest: {fileID: 422749939204689055}
-  RecordClipDuration: 10
-  MinSpeakingLevel: 0.0001
+  RecordClipDuration: 60
+  VoiceThreshold: 0.02
+  AverageVoiceLevel: 0.0001
   IsUserSpeaking: 0
   AverageSpeakingVolume: 0
   OnUserStartSpeaking:

@@ -11922,6 +11922,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MicrophoneObjContainer
       objectReference: {fileID: 0}
+    - target: {fileID: 422749939204689025, guid: 973475769a368974cbfc1c9563e4e0de,
+        type: 3}
+      propertyPath: MinSpeakingLevel
+      value: 0.0001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 973475769a368974cbfc1c9563e4e0de, type: 3}
 --- !u!95 &855152903728534153
