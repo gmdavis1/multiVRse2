@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class UIManager : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class UIManager : MonoBehaviour
     AsyncOperation sync;
     Scene scene;
 
+    public UnityEvent ClosedEvent = new UnityEvent();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +31,17 @@ public class UIManager : MonoBehaviour
         StartCoroutine(PlayText());
     }
 
+    private void OnDestroy()
+    {
+        ClosedEvent.RemoveAllListeners();
+    }
+
     public void OnClickNextIntro()
     {
+        ClosedEvent.Invoke();
+
         gameObject.SetActive(false);
+
         //StartCoroutine(LoadingCoroutine());
         //NextButton.SetActive(false);
     }
