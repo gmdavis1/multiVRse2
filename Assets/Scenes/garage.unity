@@ -6569,7 +6569,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 162.81801, z: 0}
 --- !u!1 &729355882
 GameObject:
@@ -9794,7 +9794,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Director: {fileID: 1380583540}
-  ColliderToDisable: {fileID: 1661139629}
 --- !u!1 &1391501340
 GameObject:
   m_ObjectHideFlags: 0
@@ -11219,7 +11218,7 @@ PrefabInstance:
     - target: {fileID: 6885695947614511383, guid: 8546fff591bf895489c03365a610ef50,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6885695947614511383, guid: 8546fff591bf895489c03365a610ef50,
         type: 3}
@@ -11835,7 +11834,7 @@ GameObject:
   - component: {fileID: 1661139629}
   - component: {fileID: 1661139628}
   m_Layer: 0
-  m_Name: CarCollider
+  m_Name: TransitionStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11859,6 +11858,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1380583541}
         m_MethodName: PlayTimeline
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1661139627}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11892,7 +11902,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1686408458
 GameObject:
@@ -13278,7 +13288,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1944346472
 PrefabInstance:
@@ -14078,7 +14088,7 @@ RectTransform:
   - {fileID: 294218601}
   - {fileID: 187390122}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14202,7 +14212,7 @@ PrefabInstance:
     - target: {fileID: 422749937770434982, guid: 973475769a368974cbfc1c9563e4e0de,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 422749937770434982, guid: 973475769a368974cbfc1c9563e4e0de,
         type: 3}
@@ -15688,7 +15698,7 @@ PrefabInstance:
     - target: {fileID: 7379814486906163991, guid: 40960ac2dc4867e43a6700630eb9f6b5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7379814486906163991, guid: 40960ac2dc4867e43a6700630eb9f6b5,
         type: 3}
