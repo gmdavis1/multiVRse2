@@ -38,51 +38,12 @@ public class WebSocketHandler : MonoBehaviour
         #if !UNITY_WEBGL || UNITY_EDITOR
             Socket.DispatchMessageQueue();
         #endif
-
-        //if (Input.GetKeyDown(KeyCode.Space) == true)
-        //{
-        //    SendSocketMessage();
-        //}
     }
 
     private void OnDestroy()
     {
         SocketMessageEvent.RemoveAllListeners();
     }
-
-    //private async void SendSocketMessage()
-    //{
-        //using (HttpClient client = new HttpClient())
-        //{
-        //    using (var request = new HttpRequestMessage(HttpMethod.Post, "https://dc368368.herokuapp.com/"))
-        //    {
-        //        string json = JsonUtility.ToJson(new SrcAction { action = "sendmessage" }, true);
-        //        Debug.Log($"JSON:\n{json}");
-        //
-        //        request.Content = new StringContent(json);
-        //
-        //        using (HttpResponseMessage response = await client.SendAsync(request))
-        //        {
-        //            Debug.Log($"Response Success = {response.IsSuccessStatusCode} | Code: {response.StatusCode} ({(int)response.StatusCode})");
-        //
-        //            //await Socket.Receive();
-        //        }
-        //    }
-        //}
-
-        /*if (Socket.State == WebSocketState.Open)
-        {
-            Debug.Log("Sending text...");
-
-            string text = JsonUtility.ToJson(new SrcAction { action = "sendmessage" }, true);
-
-            await Socket.SendText(text);
-
-            Debug.Log("Send complete!");
-        }*/
-
-        //await Socket.Receive();
-    //}
 
     private async void OnApplicationQuit()
     {
@@ -171,10 +132,4 @@ public class WebSocketHandler : MonoBehaviour
         public string action = string.Empty;
         public string value = string.Empty;
     }
-
-    //[System.Serializable]
-    //public class SrcAction
-    //{
-    //    public string action = string.Empty;
-    //}
 }
