@@ -10,7 +10,7 @@ The **Goals** prefab contains all entries in the checklist. The checklist entrie
 
 WebSocket connections are handled in **WebSocketHandler.cs**, which is attached to a **WebSocketHandler** prefab. This script starts up the connection defined by **SOCKET_URL** and has a SocketMessageEvent that is invoked after receiving a response. This event passes back a **SocketResponse** object which contains the scene name, action, and value of the response. The **SocketResponse** is created by parsing the JSON string coming in from the WebSocket.
 
-**PlayCloudAudio.cs** listens to the SocketMessageEvent for "playaudio" actions then goes through the process of fetching the audio file and playing it along with an animation to show the character speaking.
+**PlayCloudAudio.cs** listens to the SocketMessageEvent for "playaudio" actions then goes through the process of fetching the audio file and playing it along with an animation to show the character speaking. If **SetAnimTrigger** is true, it will set a trigger on the animator named **AnimTriggerName** instead of playing the talk animation directly. This is advantageous for having smoother animation transitions.
 
 Similarly, **ChangeSceneListener.cs** listens only for "changescene" actions and changes to the given scene. This is attached to a **ChangeSceneListener** GameObject in the scene.
 
@@ -18,8 +18,8 @@ Similarly, **ChangeSceneListener.cs** listens only for "changescene" actions and
 
 Intro transitions are achieved using Timelines and PlayableDirectors. The timelines are located in **Assets > Timelines**.
 
-In the garage scene, the Camera object has the PlayableDirector and a script named **StartTimeline.cs**. The "TransitionStart" GameObject has a MouseDownHandler and BoxCollider, which is turned on when clicking on the door. This is achieved through the **MouseDownHandler.cs** script on the same object. MouseDownHandler.cs also contains an event that's invoked when clicking on a collider. In the garage scene, it plays the timeline then deactivates the TransitionStart object so it cannot play it again. The collider is initially activated through an event invoked when exiting the IntroCanvas, found in UIManager.cs.
+In the garage scene, the "Camera" GameObject has the PlayableDirector and a GameObject named "TransitionStart" has a **StartTimeline.cs** script attached. The "StartBtn" GameObject in the canvas invokes StartTimeline.PlayTimeline to start the timeline on press. The button also deactivates itself on press so it cannot play the transition again.
 
-The doctor scene has a similar setup. Here, the two objects controlling the transition are "Camera" and "TransitionStart".
+The doctor scene has a similar setup, again using "Camera", "TransitionStart", and "StartBtn" objects.
 
 When making intro transitions, ensure the object you're moving in the Timeline **is not marked static**. If it's marked static, it will not move in play mode or in a build.

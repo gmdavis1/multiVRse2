@@ -15,6 +15,8 @@ public class PlayCloudAudio : MonoBehaviour
     public float volume = 0.5f;
 
     [SerializeField] private string TalkAnim = "Talk";
+    [SerializeField] private bool SetAnimTrigger = false;
+    [SerializeField] private string AnimTriggerName = "Talk";
 
     [SerializeField] private MechanicSceneUIManager mechanicSceneUIManager = null;
     [SerializeField] private WebSocketHandler WebSocketHndler = null;
@@ -82,7 +84,14 @@ public class PlayCloudAudio : MonoBehaviour
 
             if (anim != null)
             {
-                anim.Play(TalkAnim);
+                if (SetAnimTrigger == false)
+                {
+                    anim.Play(TalkAnim);
+                }
+                else
+                {
+                    anim.SetTrigger(AnimTriggerName);
+                }
             }
 
             audioSource.PlayOneShot(myClip, volume);
