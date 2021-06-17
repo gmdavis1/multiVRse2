@@ -837,11 +837,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2110679642}
     m_Modifications:
+    - target: {fileID: 893198972507620195, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 893198972507620195, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 893198972507620195, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893198972507620195, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 893198972507620195, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1422174718398323040, guid: a561e6e8201159844b3a8effd6832b08,
         type: 3}
       propertyPath: InputFieldCopyFrom
       value: 
       objectReference: {fileID: 1550883614}
+    - target: {fileID: 1422174718398323043, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -50.400047
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174718398323043, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -25.199978
+      objectReference: {fileID: 0}
     - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
         type: 3}
       propertyPath: m_Pivot.x
@@ -880,7 +915,7 @@ PrefabInstance:
     - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 502
+      value: 420
       objectReference: {fileID: 0}
     - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
         type: 3}
@@ -970,7 +1005,12 @@ PrefabInstance:
     - target: {fileID: 419974667998379354, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
       propertyPath: m_Spacing
-      value: 5
+      value: 17.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 558164858590277897, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 2772002776511497248, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
@@ -1020,7 +1060,7 @@ PrefabInstance:
     - target: {fileID: 2772002776511497279, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 362
+      value: 410.8
       objectReference: {fileID: 0}
     - target: {fileID: 2772002776511497279, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
@@ -1082,6 +1122,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3112548126883089019, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 97
+      objectReference: {fileID: 0}
     - target: {fileID: 3771661403470251484, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -1136,6 +1181,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5149958330932904767, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 55.5
       objectReference: {fileID: 0}
     - target: {fileID: 5149958330932904767, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
@@ -1194,6 +1244,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6468127588815750113, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 96.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468127588815750113, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1201,6 +1256,67 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084185604207606427, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_Text
+      value: "When you think you have finished all your goals, click the pause button
+        and tell the experimenters you are finished. \r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084185604207606427, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.8207547
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084185604207606427, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.062483594
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084185604207606427, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084185604207606427, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084185604207606427, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084185604207606427, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504643537504303860, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8165635869268291457, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -14.710085
+      objectReference: {fileID: 0}
+    - target: {fileID: 8165635869268291457, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.35495
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001324910860008005, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_Text
+      value: Schedule the car to be fixed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001324910860008005, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f196d8d283e994459689acf1ff79fca, type: 3}
@@ -1329,7 +1445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -70.5, y: 39.819946}
+  m_AnchoredPosition: {x: -70.5, y: 39.819824}
   m_SizeDelta: {x: 160, y: 79.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &220736283
@@ -4665,6 +4781,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 438800592}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &441628752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441628753}
+  - component: {fileID: 441628755}
+  - component: {fileID: 441628754}
+  m_Layer: 5
+  m_Name: label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &441628753
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441628752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2116728910}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 196.65, y: 295.25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &441628754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441628752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 28
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 89
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: REMINDERS
+--- !u!222 &441628755
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441628752}
+  m_CullTransparentMesh: 0
 --- !u!1 &447176454
 GameObject:
   m_ObjectHideFlags: 0
@@ -5874,7 +6068,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 128.6, y: 39.819946}
+  m_AnchoredPosition: {x: 128.6, y: 39.819824}
   m_SizeDelta: {x: 160, y: 79.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &648643950
@@ -6571,6 +6765,177 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 162.81801, z: 0}
+--- !u!1001 &718236111
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2110679642}
+    m_Modifications:
+    - target: {fileID: 893198972507620195, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_Text
+      value: "- 2018 Toyota Camry with 25,000 miles\n- License plate number: RKS5892\n-
+        Oil changes every 5,000 miles, no problems until now\n- Indicators and gauges
+        on dashboard show no problems\n- Over the last week:\n  - Ticking noise from
+        engine\n  - \u201CHot\u201D odor from vents\n  - Wet spots underneath parked
+        car\n- Yesterday: \n  - Steam coming from hood\n  - Car stopped and wouldn\u2019t
+        start again\n- You have full warranty before 30,000 miles\n- Your phone number:
+        650-387-9745"
+      objectReference: {fileID: 0}
+    - target: {fileID: 893198972507620195, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 893198972507620195, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893198972507620195, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 893198972507620195, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174718398323040, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174718398323040, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: InputFieldCopyFrom
+      value: 
+      objectReference: {fileID: 1550883614}
+    - target: {fileID: 1422174718398323043, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -50.400047
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174718398323043, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -25.199978
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 420
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 315
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 315.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422174719749037811, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_Name
+      value: RemindersDisplay
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1422174718398323040, guid: a561e6e8201159844b3a8effd6832b08, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: a561e6e8201159844b3a8effd6832b08, type: 3}
 --- !u!1 &729355882
 GameObject:
   m_ObjectHideFlags: 0
@@ -6800,7 +7165,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -280.4, y: 39.819946}
+  m_AnchoredPosition: {x: -280.4, y: 39.819824}
   m_SizeDelta: {x: 160, y: 79.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &744433978
@@ -7742,6 +8107,84 @@ Transform:
   m_Father: {fileID: 1900768041}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &898219627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 898219628}
+  - component: {fileID: 898219630}
+  - component: {fileID: 898219629}
+  m_Layer: 5
+  m_Name: label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &898219628
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898219627}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 187390122}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 196.65, y: 295.25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &898219629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898219627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 28
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 89
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: YOUR NOTES
+--- !u!222 &898219630
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898219627}
+  m_CullTransparentMesh: 0
 --- !u!1 &917590143
 GameObject:
   m_ObjectHideFlags: 0
@@ -8188,7 +8631,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1179.7, y: 39.819946}
+  m_AnchoredPosition: {x: 1179.7002, y: 39.819824}
   m_SizeDelta: {x: 200, y: 79.63995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &969039039
@@ -8602,7 +9045,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300.59998, y: -45.19995}
+  m_AnchoredPosition: {x: 300.5996, y: -45.200195}
   m_SizeDelta: {x: 601.20276, y: 90.48749}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1113432333 stripped
@@ -11296,6 +11739,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6781564994563179569, guid: 8546fff591bf895489c03365a610ef50,
+        type: 3}
+      propertyPath: m_Text
+      value: Click here to edit your notes
+      objectReference: {fileID: 0}
     - target: {fileID: 6885695945905438461, guid: 8546fff591bf895489c03365a610ef50,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -11314,27 +11762,61 @@ PrefabInstance:
     - target: {fileID: 6885695947001069536, guid: 8546fff591bf895489c03365a610ef50,
         type: 3}
       propertyPath: m_Text
-      value: "\u4E2D\u6587\u53EF\u4EE5\u4E2D\u6587\u53EF\u4EE5\u4E2D\u6587\u53EF\u4EE5\u3002\n\n\nYou
-        live in the US. You drive your car (2018 Toyota Camry with 25,000 miles)
-        to and from work every day, about 20 miles each way. You take your car in
-        for scheduled oil changes every 5,000 miles and haven\u2019t had any problems
-        that needed repair before now.  Over the last week, you\u2019ve noticed some
-        odd behavior. A few times last week, you heard a ticking noise from the engine
-        for a few minutes. On Wednesday, you smelled a burning smell coming through
-        the vents as you were getting off the highway, but the odor stopped after
-        you arrived at work. You have also found some wet spots in your home garage
-        underneath where you normally park your car. None of the indicators or gauges
-        on the dashboard have shown anything wrong though; everything looks normal. 
-        Yesterday, you were driving home from work and steam started pouring out
-        of the hood. You pulled over and stopped on the side of the road and your
-        car wouldn\u2019t start again, even after waiting 10 minutes for the steam
-        to go away. You had your car towed to the mechanic shop and now you are talking
-        to the mechanic to get your car fixed. You have an extended warranty that
-        covers repairs until 30,000 miles, so you shouldn\u2019t have to pay to get
-        the car fixed.  Today is Saturday. You will need a car to drive to work on
-        Monday morning. Your warranty is going to run out in a few months. Your goals
-        are to get your car fixed and be able to get to work on Monday and make sure
-        there are no other parts that will break down soon. "
+      value: "You live in the US. You drive your car (2018 Toyota Camry with 25,000
+        miles) to and from work every day, about 20 miles each way. You take your
+        car in for scheduled oil changes every 5,000 miles and haven\u2019t had any
+        problems that needed repair before now.\n\nOver the last week, you\u2019ve
+        noticed some odd behavior. A few times last week, you heard a ticking noise
+        from the engine for a few minutes. On Wednesday, you smelled a burning smell
+        coming through the vents as you were getting off the highway, but the odor
+        stopped after you arrived at work. You have also found some wet spots in
+        your home garage underneath where you normally park your car. None of the
+        indicators or gauges on the dashboard have shown anything wrong though; everything
+        looks normal.\n\nYesterday, you were driving home from work and steam started
+        pouring out of the hood. You pulled over and stopped on the side of the road
+        and your car wouldn\u2019t start again, even after waiting 10 minutes for
+        the steam to go away. You had your car towed to the mechanic shop and now
+        you are talking to the mechanic to get your car fixed. You have an extended
+        warranty that covers repairs until 30,000 miles, so you shouldn\u2019t have
+        to pay to get the car fixed.\n\nToday is Saturday. You will need a car to
+        drive to work on Monday morning. Your warranty is going to run out in a few
+        months. Your goals are to get your car fixed and be able to get to work on
+        Monday and make sure there are no other parts that will break down soon. 
+        \n\nYour goals (will be displayed on the screen during the task):\n- Schedule
+        the car to be fixed. \n- Today is Saturday. You need to drive to work on
+        Monday morning.\n- Your warranty is going to run out in a few months. Make
+        sure there are no other parts that will break down soon.\n- When you think
+        you have finished all your goals, tell the experimenters you are finished.
+        \n\nReminders displayed on screen during the task:\n- 2018 Toyota Camry with
+        25,000 miles\n- License plate number: RKS5892\n- Oil changes every 5,000
+        miles, no problems until now\n- Indicators and gauges on dashboard show no
+        problems\n- Over the last week:\n  - Ticking noise from engine\n  - \u201CHot\u201D
+        odor from vents\n  - Wet spots underneath parked car\n- Yesterday: \n  -
+        Steam coming from hood\n  - Car stopped and wouldn\u2019t start again\n-
+        You have full warranty before 30,000 miles\n- Your phone number: 650-387-9745\n\nYou
+        can add notes with some language you want to remember to use. If you would
+        like to add any of your own notes to be displayed on the screen during the
+        task, click the button below left. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885695947001069536, guid: 8546fff591bf895489c03365a610ef50,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885695947001069536, guid: 8546fff591bf895489c03365a610ef50,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885695947001069567, guid: 8546fff591bf895489c03365a610ef50,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885695947001069567, guid: 8546fff591bf895489c03365a610ef50,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -743
       objectReference: {fileID: 0}
     - target: {fileID: 6885695947614511379, guid: 8546fff591bf895489c03365a610ef50,
         type: 3}
@@ -14332,6 +14814,7 @@ RectTransform:
   - {fileID: 1454402850}
   - {fileID: 1290638267}
   - {fileID: 2045370195}
+  - {fileID: 2116728910}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14359,6 +14842,12 @@ MonoBehaviour:
   NotesText: {fileID: 399827981}
   WebText: {fileID: 1104426259}
   NextSceneName: doctor
+--- !u!224 &2116728910 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1422174719749037810, guid: a561e6e8201159844b3a8effd6832b08,
+    type: 3}
+  m_PrefabInstance: {fileID: 718236111}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2132188332
 GameObject:
   m_ObjectHideFlags: 0
