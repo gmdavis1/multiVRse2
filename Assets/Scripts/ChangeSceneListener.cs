@@ -39,6 +39,6 @@ public class ChangeSceneListener : MonoBehaviour
         }
 
         //Change scene
-        SceneManager.LoadScene(socketResponse.Value);
+        SceneLoader.Instance.LoadScene(socketResponse.Value, LoadSceneMode.Single);
     }
 }

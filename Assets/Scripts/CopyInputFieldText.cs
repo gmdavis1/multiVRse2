@@ -7,7 +7,7 @@ using TMPro;
 public class CopyInputFieldText : MonoBehaviour
 {
     [SerializeField] private InputField InputFieldCopyFrom = null;
-    [SerializeField] private Text TextCopyTo = null;
+    [SerializeField] private InputField TextCopyTo = null;
 
     private void Start()
     {
