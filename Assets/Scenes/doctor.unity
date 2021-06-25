@@ -2362,6 +2362,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5806999759625016252, guid: c1490953f6873564f9a7db1b7e2a9bd3,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5806999759625016252, guid: c1490953f6873564f9a7db1b7e2a9bd3,
+        type: 3}
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
@@ -2438,7 +2443,7 @@ PrefabInstance:
     - target: {fileID: 7711826140260002502, guid: c1490953f6873564f9a7db1b7e2a9bd3,
         type: 3}
       propertyPath: m_Text
-      value: Ask where to pay and get medicine.
+      value: "\u8BE2\u95EE\u5728\u54EA\u91CC\u4ED8\u6B3E\u62FF\u836F\u3002"
       objectReference: {fileID: 0}
     - target: {fileID: 8649117769483337692, guid: c1490953f6873564f9a7db1b7e2a9bd3,
         type: 3}
@@ -2592,8 +2597,7 @@ PrefabInstance:
     - target: {fileID: 7711826140260002502, guid: c1490953f6873564f9a7db1b7e2a9bd3,
         type: 3}
       propertyPath: m_Text
-      value: "When you think you have finished all your goals, click the pause button
-        and tell the experimenters you are finished. \r"
+      value: "\u5B8C\u6210\u4EFB\u52A1\u540E\uFF0C\u544A\u8BC9\u5B9E\u9A8C\u4EBA\u5458\u5458\u4F60\u5DF2\u7ECF\u5B8C\u6210\u4E86\u5373\u53EF\u3002"
       objectReference: {fileID: 0}
     - target: {fileID: 7711826140260002502, guid: c1490953f6873564f9a7db1b7e2a9bd3,
         type: 3}
@@ -2612,8 +2616,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7711826140260002502, guid: c1490953f6873564f9a7db1b7e2a9bd3,
         type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711826140260002502, guid: c1490953f6873564f9a7db1b7e2a9bd3,
+        type: 3}
       propertyPath: m_FontData.m_MinSize
-      value: 0
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711826140260002502, guid: c1490953f6873564f9a7db1b7e2a9bd3,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7711826140260002502, guid: c1490953f6873564f9a7db1b7e2a9bd3,
         type: 3}
@@ -5526,45 +5540,37 @@ PrefabInstance:
     - target: {fileID: 6885695947001069536, guid: 8546fff591bf895489c03365a610ef50,
         type: 3}
       propertyPath: m_Text
-      value: "You live in the US and you work at an office job. Over the past month,
-        you have been getting headaches that are worse and worse. At the beginning,
-        you were getting headaches at the end of the day after working on the computer
-        for several hours. Recently, you are having difficulty seeing the computer
-        screen during your work day and you have been getting headaches later in
-        the work day.\n\nThe headaches feel like pressure along your forehead, and
-        taking Tylenol usually helps. The typical pain level is about 4-5 out of
-        10 and it lasts one hour, but yesterday you had a headache that was 7 out
-        of 10 pain level and lasted for several hours. The only thing that helped
-        with the headache yesterday was going to bed. Right now you have a mild headache
-        (2-3 out of 10 pain scale).\n\nYou were promoted one year ago and you have
-        had to work longer hours since the promotion. Your stress level has gone
-        up since then and you have been drinking more coffee (about 3 cups per day).
-        You do not smoke, drink alcohol, or use drugs, and you are not allergic to
-        any medications. You are not taking any medications right now except for
-        the Tylenol.\n\nYou want to get rid of these headaches so that you can concentrate
-        on work again, because this is an important month for your company.\n \nYour
-        goals (will be displayed on the screen during the task):\n- Report your symptoms.
-        \n- Get the diagnosis and instructions.\n- Express your need to recover as
-        soon as possible. \n- Check medical insurance coverage.\n- Ask where to pay
-        and get medicine.\n- When you think you have finished all your goals, tell
-        the experimenters you are finished. \n\nReminders displayed on screen during
-        the task:\n- Over the past month:\n  - Headaches at the end of the day after
-        working on the computer for several hours, recently getting worse\n  - Pain
-        level about 4-5 out of 10, lasts one hour, taking Tylenol helps\n  - Feeling
-        of pressure along the forehead\n  - Recently, difficulty seeing the computer
-        screen during the work day\n- Yesterday: \n  - Headache for several hours
-        with 7 out of 10 pain level\n  - Only thing that helped was going to bed\n-
-        You were promoted one year ago and have worked longer hours with more stress\n-
-        3 cups of coffee per day and no alcohol, drugs, or smoking\n- You have United
-        HealthNet medical insurance with full coverage.\n- Your phone number: 650-387-9745\n\nYou
-        can add notes with some language you want to remember to use. If you would
-        like to add any of your own notes to be displayed on the screen during the
-        task, click the button below left. "
+      value: "\u4F60\u4F4F\u5728\u7F8E\u56FD\uFF0C\u4F60\u6709\u4E00\u4EFD\u767D\u9886\u5DE5\u4F5C\u3002\u5728\u8FC7\u53BB\u7684\u4E00\u4E2A\u6708\u91CC\uFF0C\u4F60\u7684\u5934\u75DB\u8D8A\u6765\u8D8A\u4E25\u91CD\u3002\u4E00\u5F00\u59CB\uFF0C\u4F60\u5728\u7535\u8111\u524D\u5DE5\u4F5C\u51E0\u5C0F\u65F6\u4F1A\u5934\u75DB\uFF0C\u7279\u522B\u662F\u6BCF\u5929\u4E0B\u73ED\u7684\u65F6\u5019\u3002\u6700\u8FD1\uFF0C\u60A8\u5728\u5DE5\u4F5C\u65F6\u770B\u4E0D\u6E05\u7535\u8111\u5C4F\u5E55\uFF0C\u5E76\u4E14\u5728\u5DE5\u4F5C\u4E00\u6BB5\u65F6\u95F4\u540E\u5C31\u4F1A\u5F00\u59CB\u5934\u75DB\u3002\n\n\u5934\u75DB\u65F6\u4F60\u611F\u89C9\u5230\u989D\u5934\u4E0A\u6709\u538B\u529B\uFF0C\u670D\u7528\u6CF0\u8BFA\u901A\u5E38\u4F1A\u7F13\u89E3\u3002\u5982\u679C\u6EE1\u5206\u4E3A
+        10 \u5206\uFF0C\u4F60\u7684\u75BC\u75DB\u7A0B\u5EA6\u5728 4-5 \u5206\u5E76\u4E14\u6301\u7EED\u4E00\u5C0F\u65F6\uFF0C\u4F46\u6628\u5929\u60A8\u7684\u5934\u75DB\u8FBE\u5230\u4E867\u5206\uFF0C\u6301\u7EED\u4E86\u597D\u51E0\u4E2A\u5C0F\u65F6\u3002\u6628\u5929\u552F\u4E00\u80FD\u7F13\u89E3\u5934\u75DB\u7684\u4E8B\u60C5\u5C31\u662F\u7761\u89C9\u3002\u73B0\u5728\u60A8\u6709\u8F7B\u5FAE\u7684\u5934\u75DB\uFF0C\u5927\u69822-3\u5206\u3002\n\n\u4F60\u4E00\u5E74\u524D\u5347\u804C\u4E86\uFF0C\u5347\u804C\u540E\u4F60\u5FC5\u987B\u52A0\u73ED\u3002\u4ECE\u90A3\u4EE5\u540E\uFF0C\u60A8\u611F\u89C9\u538B\u529B\u589E\u5927\uFF0C\u559D\u5496\u5561\u66F4\u591A\u4E86\uFF08\u6BCF\u5929\u7EA6
+        3 \u676F\uFF09\u3002\u60A8\u4E0D\u62BD\u70DF\u3001\u4E0D\u559D\u9152\u6216\u5438\u6BD2\uFF0C\u5E76\u4E14\u60A8\u5BF9\u4EFB\u4F55\u836F\u7269\u90FD\u4E0D\u8FC7\u654F\u3002\u9664\u4E86\u6CF0\u8BFA\uFF0C\u60A8\u73B0\u5728\u6CA1\u6709\u670D\u7528\u4EFB\u4F55\u836F\u7269\u3002\n\n\u60A8\u60F3\u6CBB\u597D\u5934\u75DB\uFF0C\u8FD9\u6837\u624D\u80FD\u4E13\u6CE8\u5DE5\u4F5C\uFF0C\u8FD9\u4E2A\u6708\u5BF9\u60A8\u7684\u516C\u53F8\u6765\u8BF4\u5F88\u91CD\u8981\u3002\n\n\u60A8\u7684\u4EFB\u52A1\uFF08\u573A\u666F\u4E2D\u4F1A\u6301\u7EED\u663E\u793A\uFF09\uFF1A\n-
+        \u4E0E\u533B\u751F\u7528\u82F1\u6587\u6C9F\u901A\uFF0C\u62A5\u544A\u60A8\u7684\u75C7\u72B6\u3002\n-
+        \u83B7\u53D6\u8BCA\u65AD\u548C\u8BF4\u660E\u3002\n- \u8868\u8FBE\u60A8\u9700\u8981\u5C3D\u5FEB\u6062\u590D\u3002\n-
+        \u68C0\u67E5\u533B\u7597\u4FDD\u9669\u8303\u56F4\u3002\n- \u8BE2\u95EE\u5728\u54EA\u91CC\u4ED8\u6B3E\u62FF\u836F\u3002\n-
+        \u5B8C\u6210\u4EFB\u52A1\u540E\uFF0C\u544A\u8BC9\u5B9E\u9A8C\u4EBA\u5458\u5458\u4F60\u5DF2\u7ECF\u5B8C\u6210\u4E86\u5373\u53EF\u3002\n\n\u4EFB\u52A1\u63D0\u793A
+        \uFF08\u573A\u666F\u4E2D\u4F1A\u6301\u7EED\u663E\u793A\uFF09\uFF1A\n- \u8FC7\u53BB\u4E00\u4E2A\u6708\uFF1A\n 
+        - \u5728\u7535\u8111\u524D\u5DE5\u4F5C\u51E0\u4E2A\u5C0F\u65F6\u540E\uFF0C\u4E0B\u73ED\u65F6\u5934\u75DB\uFF0C\u6700\u8FD1\u8D8A\u6765\u8D8A\u4E25\u91CD\n 
+        - \u75BC\u75DB\u7A0B\u5EA6\u7EA6\u4E3A 4-5 \u5206\uFF08\u6EE1\u5206 10 \u5206\uFF09\uFF0C\u6301\u7EED\u4E00\u5C0F\u65F6\uFF0C\u670D\u7528\u6CF0\u8BFA\u80FD\u7F13\u89E3\u75BC\u75DB\n 
+        - \u989D\u5934\u6709\u538B\u8FEB\u611F\n  - \u6700\u8FD1\u5728\u5DE5\u4F5C\u65F6\u770B\u4E0D\u6E05\u7535\u8111\u5C4F\u5E55\n-
+        \u6628\u5929\uFF1A\n  - \u5934\u75DB\u6570\u5C0F\u65F6\uFF0C\u75BC\u75DB\u7A0B\u5EA67\u5206/10\u5206\n 
+        - \u53EA\u6709\u7761\u89C9\u80FD\u7F13\u89E3\u75BC\u75DB\n- \u4F60\u4E00\u5E74\u524D\u5347\u804C\uFF0C\u52A0\u73ED\u53D8\u591A\uFF0C\u538B\u529B\u66F4\u5927\n-
+        \u6BCF\u5929 3 \u676F\u5496\u5561\uFF0C\u4E0D\u996E\u9152\u3001\u5438\u6BD2\u6216\u5438\u70DF\n-
+        \u60A8\u62E5\u6709 United HealthNet \u5168\u989D\u533B\u7597\u4FDD\u9669\u3002\n-
+        \u60A8\u7684\u7535\u8BDD\u53F7\u7801\uFF1A650-387-9745\n\n\u60A8\u53EF\u4EE5\u4F7F\u7528\u4EFB\u4F55\u8BED\u8A00\u505A\u7B14\u8BB0\u3002\u5982\u679C\u60A8\u60F3\u5728\u573A\u666F\u4E2D\u67E5\u770B\u60A8\u7684\u7B14\u8BB0\uFF0C\u8BF7\u5355\u51FB\u5DE6\u4E0B\u65B9\u7684\u6309\u94AE\u3002"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885695947001069536, guid: 8546fff591bf895489c03365a610ef50,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885695947001069536, guid: 8546fff591bf895489c03365a610ef50,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 6885695947001069567, guid: 8546fff591bf895489c03365a610ef50,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 2000
+      value: 1300
       objectReference: {fileID: 0}
     - target: {fileID: 6885695947001069567, guid: 8546fff591bf895489c03365a610ef50,
         type: 3}
@@ -7606,15 +7612,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "- Over the past month:\n  - Headaches at the end of the day after working
-    on the computer for several hours, recently getting worse\n  - Pain level about
-    4-5 out of 10, lasts one hour, taking Tylenol helps\n  - Feeling of pressure
-    along the forehead\n  - Recently, difficulty seeing the computer screen during
-    the work day\n- Yesterday: \n  - Headache for several hours with 7 out of 10
-    pain level\n  - Only thing that helped was going to bed\n- You were promoted
-    one year ago and have worked longer hours with more stress\n- 3 cups of coffee
-    per day and no alcohol, drugs, or smoking\n- You have United HealthNet medical
-    insurance with full coverage.\n- Your phone number: 650-387-9745"
+  m_Text: "- \u8FC7\u53BB\u4E00\u4E2A\u6708\uFF1A\n  - \u5728\u7535\u8111\u524D\u5DE5\u4F5C\u51E0\u4E2A\u5C0F\u65F6\u540E\uFF0C\u4E0B\u73ED\u65F6\u5934\u75DB\uFF0C\u6700\u8FD1\u8D8A\u6765\u8D8A\u4E25\u91CD\n 
+    - \u75BC\u75DB\u7A0B\u5EA6\u7EA6\u4E3A 4-5 \u5206\uFF08\u6EE1\u5206 10 \u5206\uFF09\uFF0C\u6301\u7EED\u4E00\u5C0F\u65F6\uFF0C\u670D\u7528\u6CF0\u8BFA\u80FD\u7F13\u89E3\u75BC\u75DB\n 
+    - \u989D\u5934\u6709\u538B\u8FEB\u611F\n  - \u6700\u8FD1\u5728\u5DE5\u4F5C\u65F6\u770B\u4E0D\u6E05\u7535\u8111\u5C4F\u5E55\n-
+    \u6628\u5929\uFF1A\n  - \u5934\u75DB\u6570\u5C0F\u65F6\uFF0C\u75BC\u75DB\u7A0B\u5EA67\u5206/10\u5206\n 
+    - \u53EA\u6709\u7761\u89C9\u80FD\u7F13\u89E3\u75BC\u75DB\n- \u4F60\u4E00\u5E74\u524D\u5347\u804C\uFF0C\u52A0\u73ED\u53D8\u591A\uFF0C\u538B\u529B\u66F4\u5927\n-
+    \u6BCF\u5929 3 \u676F\u5496\u5561\uFF0C\u4E0D\u996E\u9152\u3001\u5438\u6BD2\u6216\u5438\u70DF\n-
+    \u60A8\u62E5\u6709 United HealthNet \u5168\u989D\u533B\u7597\u4FDD\u9669\u3002\n-
+    \u60A8\u7684\u7535\u8BDD\u53F7\u7801\uFF1A650-387-9745"
 --- !u!224 &1422174718840381697
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7756,6 +7761,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 978359945301862483, guid: a561e6e8201159844b3a8effd6832b08,
+        type: 3}
+      propertyPath: m_Text
+      value: Click here to edit your notes
       objectReference: {fileID: 0}
     - target: {fileID: 1422174718398323040, guid: a561e6e8201159844b3a8effd6832b08,
         type: 3}
@@ -7911,7 +7921,12 @@ PrefabInstance:
     - target: {fileID: 558164858590277897, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
       propertyPath: m_Text
-      value: Express your need to recover as soon as possible.
+      value: "\u8868\u8FBE\u60A8\u9700\u8981\u5C3D\u5FEB\u6062\u590D\u3002"
+      objectReference: {fileID: 0}
+    - target: {fileID: 558164858590277897, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1147053761143091753, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
@@ -7980,7 +7995,7 @@ PrefabInstance:
     - target: {fileID: 2772002776511497279, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 302.6
+      value: 253.3
       objectReference: {fileID: 0}
     - target: {fileID: 2772002776511497279, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
@@ -8070,7 +8085,7 @@ PrefabInstance:
     - target: {fileID: 3112548126883089019, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 79.3
+      value: 48.6
       objectReference: {fileID: 0}
     - target: {fileID: 3771661403470251484, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
@@ -8100,7 +8115,7 @@ PrefabInstance:
     - target: {fileID: 4336277575826376819, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 80
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4336277575826376819, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
@@ -8130,7 +8145,7 @@ PrefabInstance:
     - target: {fileID: 5149958330932904767, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 42.3
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 5149958330932904767, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
@@ -8164,6 +8179,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6032196808101413774, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032196808101413774, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -8189,6 +8209,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6468127588815750113, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468127588815750113, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -8200,17 +8225,47 @@ PrefabInstance:
     - target: {fileID: 7084185604207606427, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
       propertyPath: m_Text
-      value: Check medical insurance coverage.
+      value: "\u68C0\u67E5\u533B\u7597\u4FDD\u9669\u8303\u56F4\u3002"
       objectReference: {fileID: 0}
     - target: {fileID: 7504643537504303860, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
       propertyPath: m_Text
-      value: Get the diagnosis and instructions.
+      value: "\u83B7\u53D6\u8BCA\u65AD\u548C\u8BF4\u660E\u3002"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504643537504303860, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504643537504303860, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504643537504303860, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 9001324910860008005, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
       propertyPath: m_Text
-      value: Report your symptoms.
+      value: "\u4E0E\u533B\u751F\u7528\u82F1\u6587\u6C9F\u901A\uFF0C\u62A5\u544A\u60A8\u7684\u75C7\u72B6\u3002\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001324910860008005, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001324910860008005, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001324910860008005, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 34
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f196d8d283e994459689acf1ff79fca, type: 3}

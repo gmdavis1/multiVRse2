@@ -26,7 +26,18 @@ public class IntroSceneURLLinker : MonoBehaviour
 
             if (sceneURLData.PrevSceneName == prevScene)
             {
-                URLText.text = sceneURLData.URL;
+                URLText.text = "Click here to open ";
+
+                if (prevScene == "")
+                {
+                    URLText.text += "the consent form";
+                }
+                else
+                {
+                    URLText.text += "the survey after " + prevScene + " scene";
+                }
+
+                //URLText.text = sceneURLData.URL;
                 URLButton.interactable = true;
                 break;
             }
@@ -35,13 +46,22 @@ public class IntroSceneURLLinker : MonoBehaviour
 
     public void OnURLClicked()
     {
-        string link = URLText.text;
-        
-        #if !UNITY_EDITOR && UNITY_WEBGL
-            OpenURLInTab(link);
-        #else
-            Application.OpenURL(link);
-        #endif
+        string prevScene = SceneLoader.Instance.PrevScene;
+
+        for (int i = 0; i < SceneURLs.Length; i++)
+        {
+            ref SceneURLData sceneURLData = ref SceneURLs[i];
+
+            if (sceneURLData.PrevSceneName == prevScene)
+            {
+                string link = sceneURLData.URL;
+                #if !UNITY_EDITOR && UNITY_WEBGL
+                    OpenURLInTab(link);
+                #else
+                    Application.OpenURL(link);
+                #endif
+            }
+        }
     }
 
     [System.Serializable]
