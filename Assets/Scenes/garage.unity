@@ -1045,6 +1045,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 558164858590277897, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 69e33aa5ca1613642ad0a009ab6b70c5,
+        type: 3}
+    - target: {fileID: 558164858590277897, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 47
       objectReference: {fileID: 0}
@@ -1057,6 +1063,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 558164858590277897, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2772002776230497549, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
@@ -1330,13 +1341,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7084185604207606427, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 69e33aa5ca1613642ad0a009ab6b70c5,
+        type: 3}
+    - target: {fileID: 7084185604207606427, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 7084185604207606427, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
       propertyPath: m_FontData.m_MinSize
-      value: 28
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 7084185604207606427, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
@@ -1348,11 +1365,22 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontStyle
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7084185604207606427, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7504643537504303860, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
       propertyPath: m_Text
       value: "\u786E\u4FDD\u661F\u671F\u4E00\u65F6\u5019\u6709\u8F66\u80FD\u5F00\u8F66\u4E0A\u73ED\u3002\n"
       objectReference: {fileID: 0}
+    - target: {fileID: 7504643537504303860, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 69e33aa5ca1613642ad0a009ab6b70c5,
+        type: 3}
     - target: {fileID: 7504643537504303860, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
       propertyPath: m_FontData.m_MaxSize
@@ -1385,6 +1413,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9001324910860008005, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 69e33aa5ca1613642ad0a009ab6b70c5,
+        type: 3}
+    - target: {fileID: 9001324910860008005, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 160
       objectReference: {fileID: 0}
@@ -1396,7 +1430,12 @@ PrefabInstance:
     - target: {fileID: 9001324910860008005, guid: 0f196d8d283e994459689acf1ff79fca,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 26
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001324910860008005, guid: 0f196d8d283e994459689acf1ff79fca,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f196d8d283e994459689acf1ff79fca, type: 3}
@@ -4895,7 +4934,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 10.2}
+  m_AnchoredPosition: {x: 0, y: 17.9}
   m_SizeDelta: {x: 196.65, y: 295.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &441628754
@@ -15073,7 +15112,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 315.65}
-  m_SizeDelta: {x: 420, y: 332.53}
+  m_SizeDelta: {x: 420, y: 343.01}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1422174719324583742
 MonoBehaviour:
